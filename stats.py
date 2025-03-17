@@ -15,11 +15,11 @@ def get_letter_count(file_path):
                 char_count[char] = 1
             else:
                 char_count[char] += 1
-        return char_count
-    
-def main():
-    counting = get_letter_count("books/frankenstein.txt")
-    for char in counting:
-        print(f"'{char}': {counting[char]}")
+    return char_count
 
-main()
+def sort_char(file_path):
+    char_count = get_letter_count(file_path)
+    alpha_char = {char: count for char, count in char_count.items() if char.isalpha()}
+    sorted_char = list(alpha_char.items())
+    sorted_char.sort(key=lambda item: item[1], reverse=True)
+    return sorted_char
