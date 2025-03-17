@@ -1,6 +1,5 @@
 import sys
 from stats import get_num_words
-#from stats import get_letter_count
 from stats import sort_char
 
 if len(sys.argv) != 2:
