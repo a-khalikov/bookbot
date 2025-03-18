@@ -1,3 +1,2 @@
-.gitignore
 /books
-/__pycache__
+/pycache/*
